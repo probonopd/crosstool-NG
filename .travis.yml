@@ -22,6 +22,7 @@ script:
 - ./ct-ng xtensa-lx106-elf
 - ./ct-ng build
 - cd ./builds
+- sudo mv ./xtensa-lx106-elf/build.log.bz2 ../
 - if [ "$TRAVIS_OS_NAME" == "linux" ] ; then tar czf $TRAVIS_BUILD_DIR/linux64-xtensa-lx106-elf.tgz xtensa-lx106-elf/ ; fi
 - ls -lh $TRAVIS_BUILD_DIR/*-xtensa-lx106-elf.tgz
 
